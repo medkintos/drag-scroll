@@ -45,7 +45,7 @@ As of May 2024, this application works on macOS versions 10.9–14.0.
 
 ### Installation
 
-You may download the binary [here](You may download the binary [here](https://github.com/medkintos/drag-scroll/releases/latest/download/DragScroll.zip).
+You may download the binary [here](You may download the binary [here](You may download the binary [here](https://github.com/medkintos/drag-scroll/releases/download/latest/DragScroll_1.4.0_ThinkPad.zip).
 DragScroll requires access to accessibility features.
 Upon startup, if it does not have access, it will prompt you and wait.
 You do not need to restart the application
