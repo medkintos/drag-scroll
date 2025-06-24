@@ -2,10 +2,23 @@
 
 [![Downloads](https://img.shields.io/github/downloads/emreyolcu/drag-scroll/total.svg)](https://github.com/emreyolcu/drag-scroll/releases)
 
+This build of DragScroll is based on [yukkerike's fork](https://github.com/yukkerike/drag-scroll)
+of [emreyolcu's DragScroll](https://github.com/emreyolcu/drag-scroll).
+
+This build is tailored to replicate ThinkPad's middle click button
+scroll functionality on macOS. Useful if you have Hackintosh installation on your ThinkPads.
+
+The difference between yukkerike's fork is disabling modifier keys for scrolling
+and change the scrolling direction into macOS "Natural Scrolling"
+
+Follow the original instruction below for installation and use your middle scroll as usual, like on Windows.
+
+----------------------------------------------------------------
+
 This small utility provides a drag-to-scroll mechanism for macOS.
 It runs in the background and does not interfere until
-either a mouse button is pressed (button 5 by default)
-or some modifier keys are held down (the Shift key by default),
+either a mouse button is pressed (button 3 by default)
+or some modifier keys are held down (not assigned by default),
 both of which activate drag scrolling mode.
 In this mode, the mouse cursor is locked in place
 and mouse movement is interpreted as scrolling.
@@ -19,6 +32,7 @@ It also works with the trackpad, for instance allowing you
 to drag scroll with a single finger
 while holding down the modifier keys.
 
+
 > **Note:**
 > The two means of activation operate independently of each other:
 > if you first press the mouse button to activate
@@ -31,7 +45,7 @@ As of May 2024, this application works on macOS versions 10.9–14.0.
 
 ### Installation
 
-You may download the binary [here](https://github.com/emreyolcu/drag-scroll/releases/latest/download/DragScroll.zip).
+You may download the binary [here](https://github.com/medkintos/drag-scroll/releases/latest/download/DragScroll.zip).
 DragScroll requires access to accessibility features.
 Upon startup, if it does not have access, it will prompt you and wait.
 You do not need to restart the application
@@ -98,7 +112,7 @@ or do the following:
   defaults write com.emreyolcu.DragScroll keys -array
   ```
 
-- **Legacy button hold behaviour:** 
+- **Legacy button hold behaviour (hold lock):** 
   By default, DragScroll uses a modern, intuitive button hold behavior introduced in **v1.4.0**. If you prefer the legacy button hold behavior, run the following command:
 
   ```

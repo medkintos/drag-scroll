@@ -1,7 +1,7 @@
 #include <ApplicationServices/ApplicationServices.h>
 
 #define DEFAULT_BUTTON 3
-#define DEFAULT_KEYS kCGEventFlagMaskShift
+#define DEFAULT_KEYS 0
 #define DEFAULT_SPEED 2
 #define MAX_KEY_COUNT 5
 #define HOLD_THRESHOLD 0.3
@@ -64,8 +64,8 @@ static CGEventRef handleMouseDrag(CGEventTapProxy proxy, CGEventRef event)
 
     CGEventRef scrollEvent = CGEventCreateScrollWheelEvent(
         NULL, kCGScrollEventUnitPixel, 2,
-        -SPEED * mouseState.lastDeltaY,
-        -SPEED * mouseState.lastDeltaX);
+        (-SPEED * mouseState.lastDeltaY) * -1,
+        (-SPEED * mouseState.lastDeltaX) * -1);
 
     if (scrollEvent)
     {
@@ -163,8 +163,8 @@ static CGEventRef tapCallback(CGEventTapProxy proxy, CGEventType type,
 
         CGEventRef scrollEvent = CGEventCreateScrollWheelEvent(
             NULL, kCGScrollEventUnitPixel, 2,
-            -SPEED * deltaY,
-            -SPEED * deltaX);
+            (-SPEED * deltaY) * -1,
+            (-SPEED * deltaX) * -1);
 
         CGEventSetLocation(scrollEvent, currentLocation);
 
